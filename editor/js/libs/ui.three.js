@@ -58,6 +58,8 @@ UI.Texture = function ( mapping ) {
 
 					var texture = new THREE.CanvasTexture( canvas, mapping );
 					texture.sourceFile = file.name;
+					texture.wrapS = THREE.RepeatWrapping;
+					texture.wrapT = THREE.RepeatWrapping;
 
 					scope.setValue( texture );
 
@@ -76,6 +78,8 @@ UI.Texture = function ( mapping ) {
 
 						var texture = new THREE.Texture( this, mapping );
 						texture.sourceFile = file.name;
+						texture.wrapS = THREE.RepeatWrapping;
+						texture.wrapT = THREE.RepeatWrapping;
 						texture.needsUpdate = true;
 
 						scope.setValue( texture );
